@@ -14,16 +14,25 @@ namespace Lab4
 
             while (ProgramContinue == true)
             {
+                long fact;
+                 
                 Console.WriteLine("Please Enter Interger from 1-10");
                 long userinput;
                 userinput = long.Parse(Console.ReadLine());
+                fact = userinput;
+                 
 
-                Console.WriteLine("You entered the number" + userinput);
 
-                for (long i = userinput; i >= 1; i--)
+                for (int i = 1; i <= userinput; i++)
+
                 {
-                    Console.WriteLine(userinput * i);
+                    fact = fact * i;
+                    
+                    
                 }
+                Console.WriteLine(fact);  
+                   
+                
                 string UserChoice;
                 Console.WriteLine("Do you want to run the code again? (N/No/y/yes)");
                 UserChoice = Console.ReadLine();
